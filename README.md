@@ -1,16 +1,12 @@
-# venues
+# flutter-foursquare
 
-A new Flutter project.
+Flutter mobile app to display a list of venues around a user's location. Uses [Foursquare's place search API](https://location.foursquare.com/developer/reference/place-search) to get the venues information and the custom Flutter plugin [current-location](https://github.com/RamiroGhise/current-location) to get the current location on Andoid and iOS.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Adjust the radius of interest.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+1. Create a Foursquare project and generate an API key [(Foursquare guide)](https://location.foursquare.com/developer/reference/places-api-get-started).
+2. Change API key from [foursquare.dart](https://github.com/RamiroGhise/flutter-foursquare/blob/main/lib/constants/foursquare.dart) with your newly generated key.
+3. Run the project. 
