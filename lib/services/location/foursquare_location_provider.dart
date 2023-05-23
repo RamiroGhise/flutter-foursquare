@@ -33,9 +33,9 @@ class FoursquareLocationProvider implements LocationProvider {
     if (searchQuery != null) queryParameters['query'] = searchQuery;
     queryParameters['ll'] = "$latitude,$longitude";
     if (searchRadius != null) queryParameters['radius'] = searchRadius;
-    queryParameters['fields'] = 'fsq_id,name,distance,categories';
+    queryParameters['fields'] = 'fsq_id,name,distance,categories,photos,tastes,features,rating,stats';
     queryParameters['sort'] = 'DISTANCE';
-    queryParameters['limit'] = '20';
+    queryParameters['limit'] = '10';
 
     final url = Uri.https(
       "api.foursquare.com",
@@ -79,5 +79,9 @@ class FoursquareLocationProvider implements LocationProvider {
       rethrow;
     }
   }
+
+  // Future<List<Photo>> getVenuePhotos() async {
+  //
+  // }
 
 }

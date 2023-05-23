@@ -1,11 +1,14 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:venues/services/location/foursquare_location_provider.dart';
 import 'package:venues/services/location/location_exceptions.dart';
 import 'package:venues/services/location/location_service.dart';
 import 'package:venues/services/location/venue.dart';
 import 'package:venues/utilities/show_error_dialog.dart';
 import 'package:venues/views/venues/venues_list_view.dart';
+import 'dart:developer' as devtools show log;
 
 class VenuesView extends StatefulWidget {
   const VenuesView({Key? key}) : super(key: key);
@@ -78,13 +81,14 @@ class _VenuesViewState extends State<VenuesView> {
                   } on SocketException catch (e) {
                     showErrorDialog(context, e.message);
                   } on NoVenuesFoundLocationException {
-                    showErrorDialog(context, 'No venues found. Please consider increasing the search radius');
+                    showErrorDialog(context,
+                        'No venues found. Please consider increasing the search radius');
                   } catch (e) {
                     showErrorDialog(context, e.toString());
                   }
                 },
                 child: const Text(
-                  'Get venues',
+                  'Find venues',
                   style: TextStyle(fontSize: 18),
                 ),
               ),
@@ -124,3 +128,44 @@ class _VenuesViewState extends State<VenuesView> {
     );
   }
 }
+
+/// Change notifier holds on to the state of the search fields.
+class SearchData extends ChangeNotifier {
+  String _venueName = '';
+  double _radius = 0.0;
+
+  double get radius => _radius;
+
+  String get venueName => _venueName;
+
+  set radius(double newValue) {
+    if (newValue != _radius) {
+      _radius = newValue;
+      notifyListeners();
+    }
+  }
+}
+
+final searchData = SearchData();
+
+// class SearchInheritedNotifier extends InheritedNotifier<SearchData> {
+//   final SearchData searchData;
+//
+//   const SearchInheritedNotifier({
+//     Key? key,
+//     required this.searchData,
+//     required Widget child,
+//   }) : super(
+//           key: key,
+//           notifier: searchData,
+//           child: child,
+//         );
+//
+//   static double of(BuildContext context) {
+//     return context
+//         .dependOnInheritedWidgetOfExactType<SearchInheritedNotifier>()
+//         ?.notifier
+//         ?.value ??
+//         0;
+//   }
+// }

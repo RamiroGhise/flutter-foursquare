@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:venues/services/location/venue.dart';
+import 'package:venues/views/venues/venue_preview.dart';
 
 class VenuesListView extends StatefulWidget {
   final List<Venue> venues;
@@ -26,21 +27,8 @@ class _VenuesListViewState extends State<VenuesListView> {
       keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
       itemBuilder: (context, index) {
         final venue = venues.elementAt(index);
-        return Container(
-          decoration: const BoxDecoration(
-            border: Border(
-              bottom: BorderSide(color: Colors.grey),
-            ),
-          ),
-          child: ListTile(
-            onTap: () {},
-            title: Text(
-              venue.name,
-              overflow: TextOverflow.ellipsis,
-            ),
-            subtitle: Text(
-                '${venue.distanceToVenue} m | ${venue.categories.first.name}'),
-          ),
+        return VenuePreview(
+          venue: venue,
         );
       },
     );
