@@ -12,22 +12,25 @@ class ImageCarousel extends StatelessWidget {
     List<Widget> images = imageUrls.map((url) {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 0.0),
-        child: SizedBox(
-          width: 100,
-          height: 100,
-          child: Image.network(
-            url,
-            fit: BoxFit.fill,
-            loadingBuilder: (context, child, loadingProgress) {
-              if (loadingProgress == null) return child;
-              return const Center(
-                child: SizedBox(
-                  height: 20.0,
-                  width: 20.0,
-                  child: CircularProgressIndicator(),
-                ),
-              );
-            },
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(8.0),
+          child: SizedBox(
+            width: 100,
+            height: 100,
+            child: Image.network(
+              url,
+              fit: BoxFit.fill,
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress == null) return child;
+                return const Center(
+                  child: SizedBox(
+                    height: 20.0,
+                    width: 20.0,
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              },
+            ),
           ),
         ),
       );

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:venues/constants/routes.dart';
+import 'package:venues/views/venues/venue_details_view.dart';
 import 'package:venues/views/venues/venues_view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +20,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const HomePage(),
+      routes: {
+        venueDetailsRoute: (context) => const VenueDetailsView(),
+      },
     );
   }
 }

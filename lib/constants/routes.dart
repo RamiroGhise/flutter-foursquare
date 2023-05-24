@@ -1,0 +1,1 @@
+const venueDetailsRoute = 'venues/venue-details/';
