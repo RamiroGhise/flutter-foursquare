@@ -1,8 +1,5 @@
-import 'dart:developer';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:venues/services/location/foursquare_location_provider.dart';
 import 'package:venues/services/location/location_exceptions.dart';
 import 'package:venues/services/location/location_service.dart';
 import 'package:venues/services/location/venue.dart';

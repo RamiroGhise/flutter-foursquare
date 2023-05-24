@@ -29,8 +29,17 @@ class Venue {
         photos = (data[venuePhotosFieldName] as List)
             .map((photo) => Photo.fromFoursquare(photo))
             .toList(),
-        stats = Stats.fromFoursquare(data[venueStatsFieldName]),
-        rating = data[venueRatingFieldName];
+        stats = Stats.fromFoursquare(data[venueStatsFieldName] ?? {}),
+        rating = data[venueRatingFieldName] ?? 0.0;
+
+  List<String> get photoUrls {
+    final List<String> list = [];
+    for (final photo in photos) {
+      final url = '${photo.prefix}original${photo.suffix}';
+      list.add(url);
+    }
+    return list;
+  }
 
   @override
   String toString() {
@@ -72,7 +81,7 @@ class Photo {
   Photo.fromFoursquare(Map<String, dynamic> data)
       : id = data[photoIdFieldName],
         prefix = data[photoPrefixFieldName],
-        suffix = data[photoPrefixFieldName],
+        suffix = data[photoSuffixFieldName],
         width = data[photoWidthFieldName],
         height = data[photoHeightFieldName];
 

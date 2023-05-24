@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:venues/services/location/venue.dart';
+import 'package:venues/utilities/widgets/image_carousel.dart';
 
 class VenuePreview extends StatelessWidget {
   final Venue venue;
@@ -17,16 +18,7 @@ class VenuePreview extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 100.0,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: photos,
-                  ),
-                ),
-              ),
+              ImageCarousel(imageUrls: venue.photoUrls),
               Text(
                 venue.name,
                 overflow: TextOverflow.ellipsis,

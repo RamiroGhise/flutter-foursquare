@@ -80,8 +80,4 @@ class FoursquareLocationProvider implements LocationProvider {
     }
   }
 
-  // Future<List<Photo>> getVenuePhotos() async {
-  //
-  // }
-
 }
