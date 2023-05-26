@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:venues/constants/routes.dart';
 import 'package:venues/views/venues/venue_details_view.dart';
 import 'package:venues/views/venues/venues_view.dart';
-
+import 'package:venues/redux/app_state.dart';
+import 'package:venues/redux/middleware.dart';
+import 'package:venues/redux/reducer.dart';
+import 'package:redux/redux.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +36,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const VenuesView();
+    final store = Store(
+      reducer,
+      initialState: const AppState.empty(),
+      middleware: [
+        loadVenuesMiddleware,
+      ],
+    );
+    return StoreProvider<AppState>(
+      store: store,
+      child: const VenuesView(),
+    );
   }
 }

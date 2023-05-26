@@ -1,11 +1,13 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:venues/redux/actions.dart';
+import 'package:venues/redux/app_state.dart';
 import 'package:venues/services/location/location_exceptions.dart';
-import 'package:venues/services/location/location_service.dart';
 import 'package:venues/services/location/venue.dart';
 import 'package:venues/utilities/show_error_dialog.dart';
 import 'package:venues/views/venues/venues_list_view.dart';
-import 'dart:developer' as devtools show log;
+import 'package:flutter_redux/flutter_redux.dart';
+
 
 class VenuesView extends StatefulWidget {
   const VenuesView({Key? key}) : super(key: key);
@@ -16,7 +18,6 @@ class VenuesView extends StatefulWidget {
 
 class _VenuesViewState extends State<VenuesView> {
   List<Venue> venuesList = [];
-  late final LocationService _location;
   late final TextEditingController _search;
   late final TextEditingController _radius;
 
@@ -24,7 +25,6 @@ class _VenuesViewState extends State<VenuesView> {
   void initState() {
     _search = TextEditingController();
     _radius = TextEditingController();
-    _location = LocationService.foursquare();
     super.initState();
   }
 
@@ -66,11 +66,11 @@ class _VenuesViewState extends State<VenuesView> {
                   const EdgeInsets.symmetric(vertical: 16.0, horizontal: 0.0),
               child: ElevatedButton(
                 onPressed: () async {
-                  final searchQuery = _search.text;
-                  final radius = _radius.text;
+                  // final searchQuery = _search.text;
+                  // final radius = _radius.text;
                   try {
-                    venuesList = await LocationService.foursquare().getVenues(
-                        searchQuery: searchQuery, searchRadius: radius);
+                    StoreProvider.of<AppState>(context)
+                        .dispatch(const LoadVenuesAction());
                   } on BadRequestLocationException catch (e) {
                     showErrorDialog(context, e.text);
                   } on UnauthorizedLocationException catch (e) {
@@ -90,34 +90,26 @@ class _VenuesViewState extends State<VenuesView> {
                 ),
               ),
             ),
-            Expanded(
-              child: StreamBuilder<List<Venue>>(
-                stream: _location.venues,
-                builder: (context, AsyncSnapshot<List<Venue>> snapshot) {
-                  // devtools.log("has data: ${snapshot.data.toString()}");
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    // Show Waiting Indicator
-                    return Container();
-                  } else if (snapshot.connectionState ==
-                          ConnectionState.active ||
-                      snapshot.connectionState == ConnectionState.done) {
-                    if (snapshot.hasError) {
-                      return const Text("Error occurred");
-                    } else if (snapshot.hasData) {
-                      List<Venue>? venues = snapshot.data;
-                      if (venues != null) {
-                        return VenuesListView(venues: venues);
-                      } else {
-                        return Container();
-                      }
-                    }
-
-                    return const Text("No Data Received");
-                  } else {
-                    return Container();
-                  }
-                },
-              ),
+            StoreConnector<AppState, bool>(
+              converter: (store) => store.state.isLoading,
+              builder: (context, isLoading) {
+                if (isLoading) {
+                  return const CircularProgressIndicator();
+                } else {
+                  return const SizedBox();
+                }
+              },
+            ),
+            StoreConnector<AppState, List<Venue>?>(
+              converter: (store) => store.state.venues,
+              builder: (context, venues) {
+                if (venues == null) {
+                  return Container();
+                }
+                return Expanded(
+                  child: VenuesListView(venues: venues),
+                );
+              },
             ),
           ],
         ),
@@ -126,24 +118,24 @@ class _VenuesViewState extends State<VenuesView> {
   }
 }
 
-/// Change notifier holds on to the state of the search fields.
-class SearchData extends ChangeNotifier {
-  String _venueName = '';
-  double _radius = 0.0;
-
-  double get radius => _radius;
-
-  String get venueName => _venueName;
-
-  set radius(double newValue) {
-    if (newValue != _radius) {
-      _radius = newValue;
-      notifyListeners();
-    }
-  }
-}
-
-final searchData = SearchData();
+// /// Change notifier holds on to the state of the search fields.
+// class SearchData extends ChangeNotifier {
+//   String _venueName = '';
+//   double _radius = 0.0;
+//
+//   double get radius => _radius;
+//
+//   String get venueName => _venueName;
+//
+//   set radius(double newValue) {
+//     if (newValue != _radius) {
+//       _radius = newValue;
+//       notifyListeners();
+//     }
+//   }
+// }
+//
+// final searchData = SearchData();
 
 // class SearchInheritedNotifier extends InheritedNotifier<SearchData> {
 //   final SearchData searchData;
