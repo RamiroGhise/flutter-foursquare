@@ -1,4 +1,5 @@
 import 'package:venues/services/location/location_service_constants.dart';
+import 'package:venues/utilities/date_and_time.dart';
 
 class Venue {
   final String venueId;
@@ -8,6 +9,9 @@ class Venue {
   final List<Photo> photos;
   final Stats stats;
   final double rating;
+  final Location location;
+  final String? website;
+  final OpenHours? hours;
 
   Venue({
     required this.venueId,
@@ -17,6 +21,9 @@ class Venue {
     required this.photos,
     required this.stats,
     required this.rating,
+    required this.location,
+    this.website,
+    this.hours,
   });
 
   Venue.fromFoursquare(Map<String, dynamic> data)
@@ -30,7 +37,10 @@ class Venue {
             .map((photo) => Photo.fromFoursquare(photo))
             .toList(),
         stats = Stats.fromFoursquare(data[venueStatsFieldName] ?? {}),
-        rating = data[venueRatingFieldName] ?? 0.0;
+        rating = data[venueRatingFieldName] ?? 0.0,
+        location = Location.fromFoursquare(data[venueLocationFieldName] ?? {}),
+        website = data[venueWebsiteFieldName],
+        hours = OpenHours.fromFoursquare(data[venueHoursFieldName]);
 
   List<String> get photoUrls {
     final List<String> list = [];
@@ -110,5 +120,116 @@ class Stats {
   @override
   String toString() {
     return 'Stats, totalPhotos: $totalPhotos, totalRatings: $totalRatings, totalTips: $totalTips';
+  }
+}
+
+class Location {
+  final String? address;
+  final String? locality;
+  final String? dma;
+  final String? region;
+  final String? postcode;
+  final String? country;
+  final String? adminRegion;
+  final String? postTown;
+  final String? poBox;
+  final String? crossStreet;
+  final String? formattedAddress;
+  final String? censusBlock;
+
+  Location({
+    this.address,
+    this.locality,
+    this.dma,
+    this.region,
+    this.postcode,
+    this.country,
+    this.adminRegion,
+    this.postTown,
+    this.poBox,
+    this.crossStreet,
+    this.formattedAddress,
+    this.censusBlock,
+  });
+
+  Location.fromFoursquare(Map<String, dynamic> data)
+      : address = data[locationAddressFieldName],
+        locality = data[locationLocalityFieldName],
+        dma = data[locationDmaFieldName],
+        region = data[locationRegionFieldName],
+        postcode = data[locationPostcodeFieldName],
+        country = data[locationCountryFieldName],
+        adminRegion = data[locationAdminRegionFieldName],
+        postTown = data[locationPostTownFieldName],
+        poBox = data[locationPoBoxFieldName],
+        crossStreet = data[locationCrossStreetFieldName],
+        formattedAddress = data[locationFormattedAddressFieldName],
+        censusBlock = data[locationCensusBlockFieldName];
+
+  @override
+  String toString() {
+    return 'Location, address: $address';
+  }
+}
+
+class OpenHours {
+  final String? display;
+  final bool? isLocalHoliday;
+  final bool? openNow;
+  final List<DailySchedule?>? schedule;
+
+  OpenHours({
+    this.display,
+    this.isLocalHoliday,
+    this.openNow,
+    this.schedule,
+  });
+
+  OpenHours.fromFoursquare(Map<String, dynamic> data)
+      : display = data[openHoursDisplayFieldName],
+        isLocalHoliday = data[openHoursIsHolidayFieldName],
+        openNow = data[openHoursOpenNowFieldName],
+        schedule = ((data[openHoursDailyScheduleFieldName] ?? []) as List)
+            .map((dailySchedule) => DailySchedule.fromFoursquare(dailySchedule))
+            .toList();
+
+  @override
+  String toString() {
+    return 'OpenHours, display: $display, isLocalHoliday: $isLocalHoliday, openNow: $openNow, schedule: $schedule';
+  }
+}
+
+class DailySchedule {
+  final String? open;
+  final String? close;
+  final int? dayNumber;
+
+  static const List<String> _weekdays = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+
+  DailySchedule.fromFoursquare(Map<String, dynamic> data)
+      : open = formatFoursquareOpenHours(data[dailyScheduleOpenFieldName]),
+        close = formatFoursquareOpenHours(data[dailyScheduleCloseFieldName]),
+        dayNumber = data[dailyScheduleDayNumberFieldName];
+
+  String? get day {
+    final dayNo = dayNumber;
+    if (dayNo != null) {
+      return _weekdays[dayNo - 1];
+    }
+
+    return null;
+  }
+
+  @override
+  String toString() {
+    return 'DailySchedule, day: $day, open: $open, close: $close';
   }
 }

@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:venues/constants/routes.dart';
 import 'package:venues/services/location/venue.dart';
 import 'package:venues/utilities/widgets/image_carousel.dart';
+import 'package:venues/views/venues/venue_summary.dart';
+import 'package:venues/views/venues/venues_list_view.dart';
 
 class VenuePreview extends StatelessWidget {
   final Venue venue;
+  final VenueCallback onTap;
 
-  const VenuePreview({Key? key, required this.venue}) : super(key: key);
+  const VenuePreview({
+    Key? key,
+    required this.venue,
+    required this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
         onTap: () {
-          Navigator.of(context).pushNamed(venueDetailsRoute);
+          onTap(venue);
         },
         splashColor: Colors.blue.withAlpha(30),
         child: Padding(
@@ -25,30 +31,7 @@ class VenuePreview extends StatelessWidget {
               ImageCarousel(imageUrls: venue.photoUrls),
               Padding(
                 padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      venue.name,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(fontWeight: FontWeight.w600),
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text('${venue.rating.toString()} / 10'),
-                        const Icon(
-                          Icons.star,
-                          color: Colors.yellow,
-                          size: 16.0,
-                        ),
-                        Text('(${venue.stats.totalRatings} reviews)')
-                      ],
-                    ),
-                    Text(
-                        '${venue.categories.first.name} | ${venue.distanceToVenue} m'),
-                  ],
-                ),
+                child: VenueSummary(venue: venue),
               ),
             ],
           ),

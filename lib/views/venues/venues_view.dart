@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:venues/constants/routes.dart';
 import 'package:venues/redux/actions.dart';
 import 'package:venues/redux/app_state.dart';
 import 'package:venues/services/location/location_exceptions.dart';
@@ -7,7 +8,6 @@ import 'package:venues/services/location/venue.dart';
 import 'package:venues/utilities/show_error_dialog.dart';
 import 'package:venues/views/venues/venues_list_view.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-
 
 class VenuesView extends StatefulWidget {
   const VenuesView({Key? key}) : super(key: key);
@@ -107,7 +107,15 @@ class _VenuesViewState extends State<VenuesView> {
                   return Container();
                 }
                 return Expanded(
-                  child: VenuesListView(venues: venues),
+                  child: VenuesListView(
+                    venues: venues,
+                    onTap: (venue) {
+                      Navigator.of(context).pushNamed(
+                        venueDetailsRoute,
+                        arguments: venue,
+                      );
+                    },
+                  ),
                 );
               },
             ),

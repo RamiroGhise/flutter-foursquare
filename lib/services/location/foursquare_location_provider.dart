@@ -35,7 +35,7 @@ class FoursquareLocationProvider implements LocationProvider {
     if (searchQuery != null) queryParameters['query'] = searchQuery;
     queryParameters['ll'] = "$latitude,$longitude";
     if (searchRadius != null) queryParameters['radius'] = searchRadius;
-    queryParameters['fields'] = 'fsq_id,name,distance,categories,photos,tastes,features,rating,stats';
+    queryParameters['fields'] = 'fsq_id,name,distance,categories,photos,tastes,features,rating,stats,location,geocodes,description,tel,email,website,hours,price,menu';
     queryParameters['sort'] = 'DISTANCE';
     queryParameters['limit'] = '10';
 
@@ -53,7 +53,7 @@ class FoursquareLocationProvider implements LocationProvider {
     List<Venue> venuesList = [];
     try {
       final http.Response response = await http.get(url, headers: headers);
-      // devtools.log(response.body.toString());
+      devtools.log(response.body.toString());
       if (response.statusCode == 400) {
         final message = jsonDecode(response.body)['message'];
         throw BadRequestLocationException(message);
