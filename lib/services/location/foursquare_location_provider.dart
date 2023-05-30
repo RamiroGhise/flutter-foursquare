@@ -53,7 +53,6 @@ class FoursquareLocationProvider implements LocationProvider {
     List<Venue> venuesList = [];
     try {
       final http.Response response = await http.get(url, headers: headers);
-      devtools.log(response.body.toString());
       if (response.statusCode == 400) {
         final message = jsonDecode(response.body)['message'];
         throw BadRequestLocationException(message);
@@ -74,10 +73,8 @@ class FoursquareLocationProvider implements LocationProvider {
         return venuesList;
       }
     } on SocketException catch (e) {
-      devtools.log(e.toString());
       rethrow;
     } catch (e) {
-      devtools.log(e.toString());
       rethrow;
     }
   }

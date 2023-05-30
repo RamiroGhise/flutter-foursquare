@@ -40,6 +40,7 @@ class HomePage extends StatelessWidget {
       reducer,
       initialState: const AppState.empty(),
       middleware: [
+        logMiddleware,
         loadVenuesMiddleware,
       ],
     );
