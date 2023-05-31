@@ -54,7 +54,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: bd9b2bdff3fd03d0bb73428888edfeaf9ebba412
+      resolved-ref: e61c09f230541a82d24c2b72120b21b516161a56
       url: "https://github.com/RamiroGhise/current-location.git"
     source: git
     version: "0.0.1"
