@@ -9,7 +9,10 @@ abstract class Action {
 // A signal to the store that the venues are loading
 @immutable
 class LoadVenuesAction extends Action {
-  const LoadVenuesAction();
+  final String? searchText;
+  final String? searchRadius;
+
+  const LoadVenuesAction({this.searchText, this.searchRadius});
 }
 
 // A signal to the store that the venues were successfully fetched from the
@@ -28,4 +31,3 @@ class FailedLoadVenuesAction extends Action {
 
   const FailedLoadVenuesAction({required this.error});
 }
-

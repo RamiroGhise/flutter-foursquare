@@ -17,16 +17,14 @@ class FoursquareLocationProvider implements LocationProvider {
 
   @override
   Future<List<Venue>> getVenues({String? searchQuery, String? searchRadius}) async {
-    double latitude = 45.757885532449386;
-    double longitude = 21.228879415527537;
-    // double latitude = 0.0;
-    // double longitude = 0.0;
-    // final coordinates = await _currentLocation.getCoordinates();
-    // devtools.log('coordinates are: ${coordinates.toString()}');
-    // if (coordinates != null) {
-    //   latitude = coordinates['latitude'] ?? 0.0;
-    //   longitude = coordinates['longitude'] ?? 0.0;
-    // }
+    double latitude = 0.0;
+    double longitude = 0.0;
+    final coordinates = await _currentLocation.getCoordinates();
+    devtools.log('coordinates are: ${coordinates.toString()}');
+    if (coordinates != null) {
+      latitude = coordinates['latitude'] ?? 0.0;
+      longitude = coordinates['longitude'] ?? 0.0;
+    }
     if (latitude == 0 || longitude == 0) {
       // if the coordinates could not be fetched
       return [];

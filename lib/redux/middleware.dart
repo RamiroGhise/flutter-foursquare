@@ -10,7 +10,12 @@ void loadVenuesMiddleware(
   NextDispatcher next,
 ) {
   if (action is LoadVenuesAction) {
-    LocationService.foursquare().getVenues().then((venues) {
+    LocationService.foursquare()
+        .getVenues(
+      searchQuery: action.searchText,
+      searchRadius: action.searchRadius,
+    )
+        .then((venues) {
       // after the venues are successfully fetched, notify the reducer
       store.dispatch(SuccessfullyLoadVenuesAction(venues: venues));
     }).catchError((e) {

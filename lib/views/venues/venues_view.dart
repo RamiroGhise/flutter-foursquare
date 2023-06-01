@@ -66,23 +66,12 @@ class _VenuesViewState extends State<VenuesView> {
                   const EdgeInsets.symmetric(vertical: 16.0, horizontal: 0.0),
               child: ElevatedButton(
                 onPressed: () async {
-                  // final searchQuery = _search.text;
-                  // final radius = _radius.text;
-                  try {
-                    StoreProvider.of<AppState>(context)
-                        .dispatch(const LoadVenuesAction());
-                  } on BadRequestLocationException catch (e) {
-                    showErrorDialog(context, e.text);
-                  } on UnauthorizedLocationException catch (e) {
-                    showErrorDialog(context, e.text);
-                  } on SocketException catch (e) {
-                    showErrorDialog(context, e.message);
-                  } on NoVenuesFoundLocationException {
-                    showErrorDialog(context,
-                        'No venues found. Please consider increasing the search radius');
-                  } catch (e) {
-                    showErrorDialog(context, e.toString());
-                  }
+                  final searchQuery = _search.text;
+                  final radius = _radius.text;
+                  StoreProvider.of<AppState>(context).dispatch(LoadVenuesAction(
+                    searchText: searchQuery,
+                    searchRadius: radius,
+                  ));
                 },
                 child: const Text(
                   'Find venues',
@@ -117,6 +106,30 @@ class _VenuesViewState extends State<VenuesView> {
                     },
                   ),
                 );
+              },
+            ),
+            StoreConnector<AppState, Object?>(
+              converter: (store) => store.state.error,
+              onDidChange: (previousViewModel, error) {
+                if (error != null) {
+                  if (error is BadRequestLocationException) {
+                    showErrorDialog(context, error.text);
+                  } else if (error is UnauthorizedLocationException) {
+                    showErrorDialog(context, error.text);
+                  } else if (error is SocketException) {
+                    showErrorDialog(context, error.message);
+                  } else if (error is NoVenuesFoundLocationException) {
+                    showErrorDialog(
+                      context,
+                      'No venues found. Please consider increasing the search radius',
+                    );
+                  } else {
+                    showErrorDialog(context, error.toString());
+                  }
+                }
+              },
+              builder: (context, error) {
+                return Container();
               },
             ),
           ],
