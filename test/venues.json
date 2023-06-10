@@ -1,0 +1,1505 @@
+{
+  "results": [
+    {
+      "fsq_id": "4bb0a950f964a5200d533ce3",
+      "categories": [
+        {
+          "id": 16041,
+          "name": "Plaza",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/plaza_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 13,
+      "features": {
+        "food_and_drink": {
+          "alcohol": {
+            "beer": true
+          }
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.757927,
+          "longitude": 21.229019
+        }
+      },
+      "hours": {
+        "is_local_holiday": false,
+        "open_now": false
+      },
+      "location": {
+        "address": "Piața Unirii",
+        "country": "RO",
+        "formatted_address": "Piața Unirii, Timișoara",
+        "locality": "Timișoara",
+        "region": "Timiș"
+      },
+      "name": "Union Square (Piața Unirii)",
+      "photos": [
+        {
+          "id": "63aa8fedecc2f65f627ab7a6",
+          "created_at": "2022-12-27T06:25:49.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/52415438_lVstgqXmjmF9p56eoDaXGm-rj6ECQGPY7PYDeSaJ7F0.jpg",
+          "width": 1439,
+          "height": 1920
+        },
+        {
+          "id": "639f056dce46700d6e19d747",
+          "created_at": "2022-12-18T12:19:57.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/12945330_BbLyLSi9tgVA4paojBbSLuugZg1wPMd8zd7GAkTl6mE.jpg",
+          "width": 1440,
+          "height": 1440
+        },
+        {
+          "id": "638b4c74affe66573709d866",
+          "created_at": "2022-12-03T13:17:40.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/180175785_LPD7SwgOjyJqDqpiqYo94WPXXVr_uAy4W-ijvt1CK0o.jpg",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "id": "62fbefc42279ee1ae1b20707",
+          "created_at": "2022-08-16T19:28:04.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/1736216_tsmNqwVUzgnreg8QR23y-4Ds5OwgFrGsfAQ3kZtZ9NY.jpg",
+          "width": 1920,
+          "height": 1440
+        },
+        {
+          "id": "62e546d430b8704671cba442",
+          "created_at": "2022-07-30T14:57:24.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/90164396_zkoh61aiEpvL0Z2B8eGgodCo8fEOXLSzLrl5bdItUmE.jpg",
+          "width": 1440,
+          "height": 1920
+        }
+      ],
+      "rating": 9.2,
+      "stats": {
+        "total_photos": 402,
+        "total_ratings": 166,
+        "total_tips": 23
+      },
+      "tastes": [
+        "beer",
+        "sunsets",
+        "café",
+        "church",
+        "concerts",
+        "architecture",
+        "people watching"
+      ]
+    },
+    {
+      "fsq_id": "4bfd06dd55539c748b91bcf3",
+      "categories": [
+        {
+          "id": 10028,
+          "name": "Art Museum",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/museum_art_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 25,
+      "features": {
+        "payment": {
+          "credit_cards": {
+            "accepts_credit_cards": false,
+            "amex": false,
+            "discover": false,
+            "visa": false,
+            "diners_club": false,
+            "master_card": false,
+            "union_pay": false
+          },
+          "digital_wallet": {
+            "accepts_nfc": false
+          }
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.757583,
+          "longitude": 21.229062
+        }
+      },
+      "hours": {
+        "display": "Tue-Sun 10:00-18:00",
+        "is_local_holiday": false,
+        "open_now": true,
+        "regular": [
+          {
+            "close": "1800",
+            "day": 2,
+            "open": "1000"
+          },
+          {
+            "close": "1800",
+            "day": 3,
+            "open": "1000"
+          },
+          {
+            "close": "1800",
+            "day": 4,
+            "open": "1000"
+          },
+          {
+            "close": "1800",
+            "day": 5,
+            "open": "1000"
+          },
+          {
+            "close": "1800",
+            "day": 6,
+            "open": "1000"
+          },
+          {
+            "close": "1800",
+            "day": 7,
+            "open": "1000"
+          }
+        ]
+      },
+      "location": {
+        "address": "Piața Unirii, nr. 1",
+        "country": "RO",
+        "cross_street": "",
+        "formatted_address": "Piața Unirii, nr. 1, 300085 Timișoara",
+        "locality": "Timișoara",
+        "postcode": "300085",
+        "region": "Timiș"
+      },
+      "name": "Muzeul de Artă",
+      "photos": [
+        {
+          "id": "646625dd5ccbc82da8e25893",
+          "created_at": "2023-05-18T13:19:25.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/26253813_ErZajnrgON8IA0D3LovGntW4-0CSBIVulXFmoQMOwyU.jpg",
+          "width": 1920,
+          "height": 1440
+        },
+        {
+          "id": "5b09b84967a9fe002ca6ece3",
+          "created_at": "2018-05-26T19:40:57.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/58403706_SVhUsnUA4AKI6FA9b58TsBUhzq69_vDfc5HmSlLB1jY.jpg",
+          "width": 1920,
+          "height": 1079
+        },
+        {
+          "id": "59706baf66f3cd0ff34f5f12",
+          "created_at": "2017-07-20T08:37:03.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/58031183_YauugCSFtHlKyDF4Zzlowz5jao5f3Rsumeoj25_i-dk.jpg",
+          "width": 1920,
+          "height": 1440
+        },
+        {
+          "id": "593a6397f427de5f7fd479ab",
+          "created_at": "2017-06-09T09:00:07.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/22976053_FbXITBNZFEtbdMIL7YR3SR627gg6XxV65PuwQEPvPUQ.jpg",
+          "width": 1425,
+          "height": 1900
+        },
+        {
+          "id": "561e2f94498e018e66f12713",
+          "created_at": "2015-10-14T10:33:56.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/137138536__NnjZYTnNNYVhizxiTgQyxWooixfX_CKK54lnAlu73s.jpg",
+          "width": 1079,
+          "height": 1920
+        }
+      ],
+      "rating": 7.9,
+      "stats": {
+        "total_photos": 32,
+        "total_ratings": 13,
+        "total_tips": 3
+      },
+      "website": "http://muzeuldeartatm.ro"
+    },
+    {
+      "fsq_id": "5628acf6498ef00220a826f9",
+      "categories": [
+        {
+          "id": 13027,
+          "name": "Bistro",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 34,
+      "features": {
+        "payment": {
+          "credit_cards": {
+            "accepts_credit_cards": true
+          }
+        },
+        "food_and_drink": {
+          "meals": {
+            "happy_hour": false
+          }
+        },
+        "services": {
+          "dine_in": {
+            "reservations": true
+          }
+        },
+        "amenities": {
+          "live_music": false
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.75772,
+          "longitude": 21.229498
+        }
+      },
+      "hours": {
+        "display": "Open Daily 8:00-24:00",
+        "is_local_holiday": false,
+        "open_now": true,
+        "regular": [
+          {
+            "close": "+0000",
+            "day": 1,
+            "open": "0800"
+          },
+          {
+            "close": "+0000",
+            "day": 2,
+            "open": "0800"
+          },
+          {
+            "close": "+0000",
+            "day": 3,
+            "open": "0800"
+          },
+          {
+            "close": "+0000",
+            "day": 4,
+            "open": "0800"
+          },
+          {
+            "close": "+0000",
+            "day": 5,
+            "open": "0800"
+          },
+          {
+            "close": "+0000",
+            "day": 6,
+            "open": "0800"
+          },
+          {
+            "close": "+0000",
+            "day": 7,
+            "open": "0800"
+          }
+        ]
+      },
+      "location": {
+        "address": "Piața Unirii, nr. 14",
+        "country": "RO",
+        "cross_street": "",
+        "formatted_address": "Piața Unirii, nr. 14, Timișoara",
+        "locality": "Timișoara",
+        "region": "Timiș"
+      },
+      "name": "Bistro M",
+      "photos": [
+        {
+          "id": "5dfe2a2dd210c70007b1c3eb",
+          "created_at": "2019-12-21T14:20:29.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/75480826_p6RiKXRxotV60R-EcKKAn5SbUfDRhuhm4N4LkqDT46A.jpg",
+          "width": 1080,
+          "height": 1440,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "5ac4a062c21cb177a435af43",
+          "created_at": "2018-04-04T09:52:34.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/58031183_FnUdhBLdNPf1b8PKhDHHCO_lF8UmBmeyLgdyVkT9YCc.jpg",
+          "width": 1440,
+          "height": 1920,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "59f98f7cbb2a470310c8d29e",
+          "created_at": "2017-11-01T09:10:20.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/18124053_Ibb-ztBJSpzY8IGXfnlKh9LDp-9RYLe6P3iKdZYBqys.jpg",
+          "width": 1425,
+          "height": 1900,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "57fb7935498e51817c39ac1c",
+          "created_at": "2016-10-10T11:19:17.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/31751356_dslhWg24zx1bmQxD57RzeIyfNIBQ-3p0lM-lhNeYz6A.jpg",
+          "width": 4160,
+          "height": 3120
+        },
+        {
+          "id": "57fa34d7498eacc89f92ac68",
+          "created_at": "2016-10-09T12:15:19.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/353745808_FH6q4Y-m5a3xiPbCnxc7kbE0x7RB0wn1NFpBHUl_APw.jpg",
+          "width": 1440,
+          "height": 1440,
+          "classifications": [
+            "food"
+          ]
+        }
+      ],
+      "rating": 8.0,
+      "stats": {
+        "total_photos": 15,
+        "total_ratings": 20,
+        "total_tips": 5
+      },
+      "tastes": [
+        "desserts",
+        "friendly staff",
+        "burgers",
+        "vegetarian food",
+        "french fries",
+        "cozy",
+        "authentic",
+        "family-friendly",
+        "lively",
+        "black bread"
+      ],
+      "website": "http://www.mbistro.ro"
+    },
+    {
+      "fsq_id": "562cdfdc498e348021f81476",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 35,
+      "features": {
+        "payment": {
+          "credit_cards": {
+            "accepts_credit_cards": true,
+            "visa": false
+          }
+        },
+        "food_and_drink": {
+          "alcohol": {
+            "beer": true,
+            "cocktails": true,
+            "full_bar": true,
+            "wine": true
+          },
+          "meals": {
+            "breakfast": true,
+            "brunch": true,
+            "dessert": true
+          }
+        },
+        "services": {
+          "dine_in": {
+            "reservations": true
+          }
+        },
+        "amenities": {
+          "outdoor_seating": true,
+          "coat_check": false,
+          "wifi": "t"
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.757587,
+          "longitude": 21.228751
+        }
+      },
+      "hours": {
+        "display": "Mon-Fri 8:00-23:30; Sat-Sun 9:00-24:00",
+        "is_local_holiday": false,
+        "open_now": true,
+        "regular": [
+          {
+            "close": "2330",
+            "day": 1,
+            "open": "0800"
+          },
+          {
+            "close": "2330",
+            "day": 2,
+            "open": "0800"
+          },
+          {
+            "close": "2330",
+            "day": 3,
+            "open": "0800"
+          },
+          {
+            "close": "2330",
+            "day": 4,
+            "open": "0800"
+          },
+          {
+            "close": "2330",
+            "day": 5,
+            "open": "0800"
+          },
+          {
+            "close": "+0000",
+            "day": 6,
+            "open": "0900"
+          },
+          {
+            "close": "+0000",
+            "day": 7,
+            "open": "0900"
+          }
+        ]
+      },
+      "location": {
+        "address": "Str. Florimund Mercy, nr. 9",
+        "country": "RO",
+        "cross_street": "Piața Unirii",
+        "formatted_address": "Str. Florimund Mercy, nr. 9 (Piața Unirii), Timișoara",
+        "locality": "Timișoara",
+        "region": "Timiș"
+      },
+      "menu": "http://eclipse-opera.ro/images/meniu_general_unirii.pdf",
+      "name": "Eclipse",
+      "photos": [
+        {
+          "id": "5978baf91f74400a80bbd896",
+          "created_at": "2017-07-26T15:53:29.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/92329073_RDDTUqqnJKx4PHNQvjUHQfotPw8fv5OQyEjiKnqaY-8.jpg",
+          "width": 1440,
+          "height": 1920,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "592401145c683875404e5a0f",
+          "created_at": "2017-05-23T09:29:56.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/648222_zF_y0nUKSXSrJVTls53HHa17PH-7vOpA9gfrCKuhtiw.jpg",
+          "width": 1440,
+          "height": 1920,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "57ba7eb5498e106802e4389f",
+          "created_at": "2016-08-22T04:25:25.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/42959080_ZXFdlaesQbBQl-IJW51Xa206GYWXZR88kD2tuNQBa8o.jpg",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "id": "570a66ab498e071a49d151cb",
+          "created_at": "2016-04-10T14:43:55.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/41876041_5b6wMd7r8Pf_o6T4pJlFm7PYJ9NwhStPStqJjxUkEXQ.jpg",
+          "width": 1440,
+          "height": 1511,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "567ff0a8498e977a9eec1622",
+          "created_at": "2015-12-27T14:07:36.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/92329073_vAqZxgWdIAbl2-agF7dXZFHqBp2E-YoI-uyISaX2Jrc.jpg",
+          "width": 1440,
+          "height": 1920
+        }
+      ],
+      "price": 1,
+      "rating": 6.8,
+      "stats": {
+        "total_photos": 6,
+        "total_ratings": 11,
+        "total_tips": 2
+      },
+      "website": "http://eclipse-opera.ro"
+    },
+    {
+      "fsq_id": "5050892ae4b03b1d2dae7eae",
+      "categories": [
+        {
+          "id": 13332,
+          "name": "Salad Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/salad_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 56,
+      "features": {
+        "payment": {
+          "credit_cards": {
+            "accepts_credit_cards": false,
+            "amex": false,
+            "discover": false,
+            "visa": false,
+            "diners_club": false,
+            "master_card": false,
+            "union_pay": false
+          },
+          "digital_wallet": {
+            "accepts_nfc": false
+          }
+        },
+        "food_and_drink": {
+          "alcohol": {
+            "cocktails": false,
+            "full_bar": false
+          },
+          "meals": {
+            "brunch": true,
+            "lunch": true,
+            "happy_hour": false,
+            "dinner": true
+          }
+        },
+        "services": {
+          "delivery": false,
+          "dine_in": {
+            "reservations": false,
+            "groups_only_reservations": false,
+            "essential_reservations": false
+          }
+        },
+        "amenities": {
+          "live_music": false,
+          "outdoor_seating": true,
+          "wifi": "n"
+        },
+        "attributes": {
+          "business_meeting": "Poor",
+          "crowded": "Average",
+          "dates_popular": "Poor",
+          "late_night": "Poor",
+          "quick_bite": "Great"
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.758296,
+          "longitude": 21.229306
+        }
+      },
+      "hours": {
+        "display": "Mon-Sat 10:00-22:00",
+        "is_local_holiday": false,
+        "open_now": true,
+        "regular": [
+          {
+            "close": "2200",
+            "day": 1,
+            "open": "1000"
+          },
+          {
+            "close": "2200",
+            "day": 2,
+            "open": "1000"
+          },
+          {
+            "close": "2200",
+            "day": 3,
+            "open": "1000"
+          },
+          {
+            "close": "2200",
+            "day": 4,
+            "open": "1000"
+          },
+          {
+            "close": "2200",
+            "day": 5,
+            "open": "1000"
+          },
+          {
+            "close": "2200",
+            "day": 6,
+            "open": "1000"
+          }
+        ]
+      },
+      "location": {
+        "address": "Piața Unirii, nr. 9",
+        "country": "RO",
+        "cross_street": "",
+        "formatted_address": "Piața Unirii, nr. 9, 300085 Timișoara",
+        "locality": "Timișoara",
+        "postcode": "300085",
+        "region": "Timiș"
+      },
+      "name": "EnJoy",
+      "photos": [
+        {
+          "id": "5a0b0e79e55d8b7a7587f249",
+          "created_at": "2017-11-14T15:40:41.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/58031183__cSDfTz_Y4A9634rH8Obh9hU1Ki4uxWGiNWsKJ7smCU.jpg",
+          "width": 1920,
+          "height": 1440,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "56c32e40cd10f060c8880bfa",
+          "created_at": "2016-02-16T14:12:16.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/476543_1Ot7A-GU30vPFk_37c3kuq7pdWuDiK_94Mph9pjhofw.jpg",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "id": "54c3b439498e97f6aa879947",
+          "created_at": "2015-01-24T15:03:21.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/25970045_kt4rxzy4Vw91RRj8w-RrrKElhJTLyDNtI3RI7qNSBkU.jpg",
+          "width": 1434,
+          "height": 1919,
+          "classifications": [
+            "indoor"
+          ]
+        },
+        {
+          "id": "5268ecb211d2aaf349286ddc",
+          "created_at": "2013-10-24T09:47:30.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/6059802_pCJoYr4rNggYnKSve2h8nHoLMyxlVjQR4LuHJIVDI1c.jpg",
+          "width": 720,
+          "height": 960,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "5155705ee4b06339f94dc16a",
+          "created_at": "2013-03-29T10:43:42.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/6059802_IKY70oteFlFiTCCHSgP5xn1j2LLxzQyfcI1Fz4nFl7s.jpg",
+          "width": 720,
+          "height": 960
+        }
+      ],
+      "price": 1,
+      "rating": 8.4,
+      "stats": {
+        "total_photos": 17,
+        "total_ratings": 28,
+        "total_tips": 8
+      },
+      "tastes": [
+        "chicken",
+        "lunch",
+        "healthy food",
+        "cozy",
+        "good for a quick meal",
+        "ciabatta bread",
+        "salads in timisoara"
+      ]
+    },
+    {
+      "fsq_id": "4c6aa20996f176b03de9b536",
+      "categories": [
+        {
+          "id": 13009,
+          "name": "Cocktail Bar",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/cocktails_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 60,
+      "features": {
+        "payment": {
+          "credit_cards": {
+            "accepts_credit_cards": false,
+            "amex": false,
+            "discover": false,
+            "visa": false,
+            "diners_club": false,
+            "master_card": false,
+            "union_pay": false
+          },
+          "digital_wallet": {
+            "accepts_nfc": false
+          }
+        },
+        "food_and_drink": {
+          "alcohol": {
+            "cocktails": true
+          },
+          "meals": {
+            "happy_hour": true
+          }
+        },
+        "amenities": {
+          "outdoor_seating": true,
+          "wifi": "t"
+        },
+        "attributes": {
+          "dressy": "Average",
+          "service_quality": "Great",
+          "value_for_money": "Great"
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.758359,
+          "longitude": 21.22912
+        }
+      },
+      "hours": {
+        "display": "Mon-Thu 8:30-23:30; Fri 8:30-24:00; Sat 0:00-1:00, 9:00-24:00; Sun 0:00-1:00, 10:00-23:30",
+        "is_local_holiday": false,
+        "open_now": true,
+        "regular": [
+          {
+            "close": "2330",
+            "day": 1,
+            "open": "0830"
+          },
+          {
+            "close": "2330",
+            "day": 2,
+            "open": "0830"
+          },
+          {
+            "close": "2330",
+            "day": 3,
+            "open": "0830"
+          },
+          {
+            "close": "2330",
+            "day": 4,
+            "open": "0830"
+          },
+          {
+            "close": "+0000",
+            "day": 5,
+            "open": "0830"
+          },
+          {
+            "close": "0100",
+            "day": 6,
+            "open": "0000"
+          },
+          {
+            "close": "+0000",
+            "day": 6,
+            "open": "0900"
+          },
+          {
+            "close": "0100",
+            "day": 7,
+            "open": "0000"
+          },
+          {
+            "close": "2330",
+            "day": 7,
+            "open": "1000"
+          }
+        ]
+      },
+      "location": {
+        "address": "Piața Unirii nr. 8",
+        "country": "RO",
+        "cross_street": "Regimentul 5 Vânători",
+        "formatted_address": "Piața Unirii nr. 8 (Regimentul 5 Vânători), Timișoara",
+        "locality": "Timișoara",
+        "region": "Timiș"
+      },
+      "name": "square - espresso social bar",
+      "photos": [
+        {
+          "id": "63946c3a62eea4411ae2f755",
+          "created_at": "2022-12-10T11:23:38.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/5312602_M64K2tVgDP9GCeTt52An0Lmd5rtGxD8qv7X7pp8TT3s.jpg",
+          "width": 1920,
+          "height": 1440
+        },
+        {
+          "id": "5a0f109cc365881529455e3f",
+          "created_at": "2017-11-17T16:38:52.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/7314278_kBSRQszsplIk9ujL2P9dRGMjOmpFEOCjK7jt8qspvus.jpg",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "id": "58f606b55c68386159dbb698",
+          "created_at": "2017-04-18T12:29:41.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/27916616_SDWt9OrCXKT5mJ2YntPe6mpu1pH8c2cDA0mXlC9yQxw.jpg",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "id": "4d9439fba6de2da100c2ecb1",
+          "created_at": "2011-03-31T08:23:23.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/PEKWUVQFJV20WNO3CYPLOQXGOHGNWSPYV2VI4HB5RMVFXDDJ.jpg",
+          "width": 539,
+          "height": 720
+        },
+        {
+          "id": "4de8c288fd2884fe153cdf72",
+          "created_at": "2011-06-03T11:16:24.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/XUL51BRZUAS0OF4ZG04SFMSFB4AHKDNVLODUSWAGGL4BPYO0.jpg",
+          "width": 720,
+          "height": 540
+        }
+      ],
+      "price": 3,
+      "rating": 7.3,
+      "stats": {
+        "total_photos": 52,
+        "total_ratings": 33,
+        "total_tips": 17
+      },
+      "tastes": [
+        "good service",
+        "fruit",
+        "great value",
+        "apples",
+        "hot chocolate",
+        "smoothies",
+        "lemonade",
+        "forests",
+        "Cuba Libre"
+      ]
+    },
+    {
+      "fsq_id": "4bc9ab7efb84c9b624631b3e",
+      "categories": [
+        {
+          "id": 13016,
+          "name": "Lounge",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 64,
+      "features": {
+        "payment": {
+          "credit_cards": {
+            "accepts_credit_cards": true,
+            "amex": false
+          }
+        },
+        "food_and_drink": {
+          "alcohol": {
+            "cocktails": true,
+            "full_bar": true
+          },
+          "meals": {
+            "brunch": false,
+            "happy_hour": true
+          }
+        },
+        "services": {
+          "delivery": false,
+          "dine_in": {
+            "reservations": true
+          }
+        },
+        "amenities": {
+          "music": true,
+          "live_music": true,
+          "outdoor_seating": true,
+          "wifi": "t"
+        },
+        "attributes": {
+          "crowded": "Great",
+          "dates_popular": "Great",
+          "dressy": "Poor",
+          "groups_popular": "Great",
+          "late_night": "Average",
+          "quick_bite": "Poor",
+          "romantic": "Average",
+          "service_quality": "Great",
+          "singles_popular": "Great",
+          "special_occasion": "Great",
+          "trendy": "Great"
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.758372,
+          "longitude": 21.229326
+        }
+      },
+      "hours": {
+        "display": "Mon-Fri 9:00-23:30; Sat-Sun 10:00-24:00",
+        "is_local_holiday": false,
+        "open_now": true,
+        "regular": [
+          {
+            "close": "2330",
+            "day": 1,
+            "open": "0900"
+          },
+          {
+            "close": "2330",
+            "day": 2,
+            "open": "0900"
+          },
+          {
+            "close": "2330",
+            "day": 3,
+            "open": "0900"
+          },
+          {
+            "close": "2330",
+            "day": 4,
+            "open": "0900"
+          },
+          {
+            "close": "2330",
+            "day": 5,
+            "open": "0900"
+          },
+          {
+            "close": "+0000",
+            "day": 6,
+            "open": "1000"
+          },
+          {
+            "close": "+0000",
+            "day": 7,
+            "open": "1000"
+          }
+        ]
+      },
+      "location": {
+        "address": "Piața Unirii, nr. 8",
+        "country": "RO",
+        "cross_street": "",
+        "formatted_address": "Piața Unirii, nr. 8, Timișoara",
+        "locality": "Timișoara",
+        "region": "Timiș"
+      },
+      "name": "Emotion Cafe",
+      "photos": [
+        {
+          "id": "5b9cc44b2db4a9002cf0103b",
+          "created_at": "2018-09-15T08:35:23.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/20239152_ko218Ej_c7jNTl27hlKpFCx7R7xk9EmvyH1S9Fs4sTs.jpg",
+          "width": 1079,
+          "height": 1920,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "59750e9935d3fc33738b26fa",
+          "created_at": "2017-07-23T21:01:13.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/5043106_lVNqz-asK0wffM_ABx5rP6o_BU_SHbtxTy70Qz4nKGQ.jpg",
+          "width": 1900,
+          "height": 1198
+        },
+        {
+          "id": "59750e89f62e09224b7ef622",
+          "created_at": "2017-07-23T21:00:57.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/5043106_w75y0yr_tFR0MffzmEWTuSYsUVQlO0f5S_95SmkQtCg.jpg",
+          "width": 1900,
+          "height": 1546
+        },
+        {
+          "id": "59750e7ceacf453223e60764",
+          "created_at": "2017-07-23T21:00:44.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/5043106_6SJJcToYJYiqWJytQx-5XVfaoR3feQfsMHU7ti2j6Iw.jpg",
+          "width": 1216,
+          "height": 1900
+        },
+        {
+          "id": "58a06b7be753561cd3a63d09",
+          "created_at": "2017-02-12T14:04:43.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/92329073_aovO8fH9voDBoW2Iv4LNxun8bY_UoHm4EfCPcuKDWYM.jpg",
+          "width": 1920,
+          "height": 1440
+        }
+      ],
+      "price": 3,
+      "rating": 8.3,
+      "stats": {
+        "total_photos": 81,
+        "total_ratings": 72,
+        "total_tips": 26
+      },
+      "tastes": [
+        "coffee",
+        "healthy food",
+        "cocktails",
+        "espresso drinks",
+        "quiet",
+        "cozy",
+        "casual",
+        "crowded",
+        "great value",
+        "authentic",
+        "trendy",
+        "good for dates",
+        "romantic",
+        "lemonade",
+        "lively",
+        "good for groups",
+        "good for special occasions",
+        "good for singles",
+        "main square"
+      ]
+    },
+    {
+      "fsq_id": "5453eb82498ea31a1f02c6fb",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 64,
+      "features": {
+        "food_and_drink": {
+          "alcohol": {
+            "bar_service": true,
+            "beer": true,
+            "cocktails": true,
+            "full_bar": true,
+            "wine": true
+          },
+          "meals": {
+            "brunch": true,
+            "happy_hour": false
+          }
+        },
+        "services": {
+          "delivery": false
+        },
+        "amenities": {
+          "smoking": true,
+          "live_music": false,
+          "outdoor_seating": false,
+          "sit_down_dining": true,
+          "wifi": "t"
+        },
+        "attributes": {
+          "crowded": "Average"
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.758305,
+          "longitude": 21.229532
+        }
+      },
+      "hours": {
+        "display": "Mon-Sat 8:30-24:00; Sun 14:00-24:00",
+        "is_local_holiday": false,
+        "open_now": true,
+        "regular": [
+          {
+            "close": "+0000",
+            "day": 1,
+            "open": "0830"
+          },
+          {
+            "close": "+0000",
+            "day": 2,
+            "open": "0830"
+          },
+          {
+            "close": "+0000",
+            "day": 3,
+            "open": "0830"
+          },
+          {
+            "close": "+0000",
+            "day": 4,
+            "open": "0830"
+          },
+          {
+            "close": "+0000",
+            "day": 5,
+            "open": "0830"
+          },
+          {
+            "close": "+0000",
+            "day": 6,
+            "open": "0830"
+          },
+          {
+            "close": "+0000",
+            "day": 7,
+            "open": "1400"
+          }
+        ]
+      },
+      "location": {
+        "address": "Piața Unirii, nr. 9",
+        "country": "RO",
+        "cross_street": "",
+        "formatted_address": "Piața Unirii, nr. 9, Timișoara",
+        "locality": "Timișoara",
+        "region": "Timiș"
+      },
+      "name": "Alice Kyteler",
+      "photos": [
+        {
+          "id": "5953b5f195d9865ba1d1c101",
+          "created_at": "2017-06-28T13:58:09.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/58031183_C-kstp0sI3ZSKrfRSsU_304dMKG62D2rw-yHhVcLCZY.jpg",
+          "width": 1920,
+          "height": 1440
+        },
+        {
+          "id": "58ca7404d25ded7692c41db4",
+          "created_at": "2017-03-16T11:16:20.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/92329073_6FqseQQvtOIQxkFyvhjeKn4E1umG7Xj-97EAcMvYK4A.jpg",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "id": "58b2ab81084be53851e3154d",
+          "created_at": "2017-02-26T10:18:41.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/12923111_ZSfNs3Yg-lalM8cwWX66i5vQ3WM09ztix0T9x3yPclg.jpg",
+          "width": 1440,
+          "height": 1920,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "572f6a91498eedd42ca355db",
+          "created_at": "2016-05-08T16:34:25.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/5043106_cHMXBux58dKY7iPQbs5gy5-fA3MoDtn4lBI8f6rwO40.jpg",
+          "width": 540,
+          "height": 960
+        },
+        {
+          "id": "5453ec93498e551bde63eadb",
+          "created_at": "2014-10-31T20:09:55.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/68238704_73MGOcdF3B2pAF_ljn1kBpWb3Bpbe2lxDzD5UNQuMaI.jpg",
+          "width": 814,
+          "height": 1440,
+          "classifications": [
+            "indoor"
+          ]
+        }
+      ],
+      "price": 1,
+      "rating": 6.8,
+      "stats": {
+        "total_photos": 8,
+        "total_ratings": 15,
+        "total_tips": 3
+      }
+    },
+    {
+      "fsq_id": "4bd72a675cf276b08eac9a00",
+      "categories": [
+        {
+          "id": 13009,
+          "name": "Cocktail Bar",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/cocktails_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 66,
+      "features": {
+        "payment": {
+          "credit_cards": {
+            "accepts_credit_cards": false,
+            "amex": false,
+            "discover": false,
+            "visa": false,
+            "diners_club": false,
+            "master_card": false,
+            "union_pay": false
+          },
+          "digital_wallet": {
+            "accepts_nfc": false
+          }
+        },
+        "food_and_drink": {
+          "alcohol": {
+            "cocktails": true
+          }
+        },
+        "services": {
+          "delivery": false,
+          "dine_in": {
+            "reservations": false,
+            "groups_only_reservations": false,
+            "essential_reservations": false
+          }
+        },
+        "amenities": {
+          "outdoor_seating": true
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.758247,
+          "longitude": 21.228494
+        }
+      },
+      "hours": {
+        "is_local_holiday": false,
+        "open_now": false
+      },
+      "location": {
+        "address": "Piața Unirii, nr. 5",
+        "country": "RO",
+        "formatted_address": "Piața Unirii, nr. 5, 300085 Timișoara",
+        "locality": "Timișoara",
+        "postcode": "300085",
+        "region": "Timiș"
+      },
+      "name": "Terasa d'Arc",
+      "photos": [
+        {
+          "id": "60d4ca53c7642b53ed8286fb",
+          "created_at": "2021-06-24T18:09:23.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/10258892_1yd_ZYV0z6qPvop_ePhzibqwvS3dNCxG_46jdefGpBY.jpg",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "id": "5b6b30905d891b002cc7b236",
+          "created_at": "2018-08-08T18:04:00.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/488220684_WBMgJLe7RBJf0DGVo9GNEKY5ZtzaeafF-oogsDdvaKM.jpg",
+          "width": 4032,
+          "height": 2268
+        },
+        {
+          "id": "5b37bc8abfc6d0002c1e2dfb",
+          "created_at": "2018-06-30T17:23:22.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/5352477_l3pU-0TRzI__CUDvc036CTl6jQg0WeniWfRyGvTzDl0.jpg",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "id": "593850a6135b396524262b73",
+          "created_at": "2017-06-07T19:14:46.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/58749_ZN45LxYHebOmdhS3HBckHupP6FG_xFAaWV0nihnsGrs.jpg",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "id": "573f1324498eb1c68aa4699a",
+          "created_at": "2016-05-20T13:37:40.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/133049709_L__shy5ydCEqI3pwwvZ0MgKwzlSsEHoqkA0YXWYCOyU.jpg",
+          "width": 1440,
+          "height": 1920,
+          "classifications": [
+            "food"
+          ]
+        }
+      ],
+      "price": 3,
+      "rating": 7.9,
+      "stats": {
+        "total_photos": 17,
+        "total_ratings": 18,
+        "total_tips": 8
+      },
+      "tastes": [
+        "shirley temple"
+      ],
+      "website": "http://www.darc.ro"
+    },
+    {
+      "fsq_id": "4bc74e4aaf07a593e6e97e2d",
+      "categories": [
+        {
+          "id": 13009,
+          "name": "Cocktail Bar",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/cocktails_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "distance": 66,
+      "features": {
+        "payment": {
+          "credit_cards": {
+            "accepts_credit_cards": true
+          }
+        },
+        "food_and_drink": {
+          "alcohol": {
+            "cocktails": true
+          },
+          "meals": {
+            "happy_hour": false
+          }
+        },
+        "amenities": {
+          "outdoor_seating": true,
+          "wifi": "t"
+        },
+        "attributes": {
+          "noisy": "Average",
+          "service_quality": "Average"
+        }
+      },
+      "geocodes": {
+        "main": {
+          "latitude": 45.757544,
+          "longitude": 21.229839
+        }
+      },
+      "hours": {
+        "is_local_holiday": false,
+        "open_now": false
+      },
+      "location": {
+        "address": "Piața Unirii nr. 14",
+        "country": "RO",
+        "cross_street": "Str. Episcop Augustin Pacha, colț cu Str. Palanca",
+        "formatted_address": "Piața Unirii nr. 14 (Str. Episcop Augustin Pacha, colț cu Str. Palanca), 300085 Timișoara",
+        "locality": "Timișoara",
+        "postcode": "300085",
+        "region": "Timiș"
+      },
+      "name": "Baroque",
+      "photos": [
+        {
+          "id": "6380a6570add5b5ac802cadb",
+          "created_at": "2022-11-25T11:26:15.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/5312602_NWus0mUN4UWfAoGNpvAfUnr0_7aGjiL8fCUnkFy3eYc.jpg",
+          "width": 1920,
+          "height": 1440
+        },
+        {
+          "id": "5d4e8b6d4afaa00008053d8c",
+          "created_at": "2019-08-10T09:16:29.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/14122127_RdgoFKAtpGXxq8EVGPrkyGgfbVSqawOXMeOKIZdZl2M.jpg",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "id": "5a114d1c8194fc76a7f2be22",
+          "created_at": "2017-11-19T09:21:32.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/46588146_8s2vwhmYh9U1PwuHlASFTUh9pAbT26mAO-6Q_fpcM1A.jpg",
+          "width": 1440,
+          "height": 1920,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "594190ff86f4cc0f25937449",
+          "created_at": "2017-06-14T19:39:43.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/46588146_aQ0t3Zaf9voJiV_0-ZPVNBZVNg6gjcHGJm3BPopboTc.jpg",
+          "width": 1440,
+          "height": 1920,
+          "classifications": [
+            "food"
+          ]
+        },
+        {
+          "id": "59304f63872f7d3634edac81",
+          "created_at": "2017-06-01T17:31:15.000Z",
+          "prefix": "https://fastly.4sqi.net/img/general/",
+          "suffix": "/22581035_nGnQKTST69bB2QyDMI7u-4Dz2qYa8NRuOMMXOqsb-oI.jpg",
+          "width": 1900,
+          "height": 1068
+        }
+      ],
+      "price": 3,
+      "rating": 7.0,
+      "stats": {
+        "total_photos": 32,
+        "total_ratings": 22,
+        "total_tips": 16
+      },
+      "tastes": [
+        "staff",
+        "frappés",
+        "Amaretto",
+        "hot caramel"
+      ]
+    }
+  ],
+  "context": {
+    "geo_bounds": {
+      "circle": {
+        "center": {
+          "latitude": 45.757814,
+          "longitude": 21.229078
+        },
+        "radius": 22000
+      }
+    }
+  }
+}
