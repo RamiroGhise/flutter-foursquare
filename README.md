@@ -2,6 +2,7 @@
 
 Flutter mobile app to display a list of venues around a user's location. Uses [Foursquare's place search API](https://location.foursquare.com/developer/reference/place-search) to get the venues information and the custom Flutter plugin [current-location](https://github.com/RamiroGhise/current-location) to get the current location on Andoid and iOS.
 
+- Uses BLoC on the [bloc_architecture](https://github.com/RamiroGhise/flutter-foursquare/tree/bloc_architecture) branch and Redux on the [main](https://github.com/RamiroGhise/flutter-foursquare/tree/main) branch.
 ## Features
 
 - Adjust the radius of interest.
