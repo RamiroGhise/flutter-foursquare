@@ -1,6 +1,6 @@
+// Application's state
 import 'package:venues/services/location/venue.dart';
 
-// Application's state
 class AppState {
   final bool isLoading;
   final List<Venue>? venues;
@@ -17,5 +17,3 @@ class AppState {
         venues = null,
         error = null;
 }
-
-

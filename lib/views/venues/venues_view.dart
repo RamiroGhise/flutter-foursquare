@@ -1,13 +1,14 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:venues/bloc/actions.dart';
+import 'package:venues/bloc/app_state.dart';
+import 'package:venues/bloc/venues_bloc.dart';
 import 'package:venues/constants/routes.dart';
-import 'package:venues/redux/actions.dart';
-import 'package:venues/redux/app_state.dart';
 import 'package:venues/services/location/location_exceptions.dart';
 import 'package:venues/services/location/venue.dart';
 import 'package:venues/utilities/show_error_dialog.dart';
 import 'package:venues/views/venues/venues_list_view.dart';
-import 'package:flutter_redux/flutter_redux.dart';
 
 class VenuesView extends StatefulWidget {
   const VenuesView({Key? key}) : super(key: key);
@@ -68,10 +69,10 @@ class _VenuesViewState extends State<VenuesView> {
                 onPressed: () async {
                   final searchQuery = _search.text;
                   final radius = _radius.text;
-                  StoreProvider.of<AppState>(context).dispatch(LoadVenuesAction(
-                    searchText: searchQuery,
-                    searchRadius: radius,
-                  ));
+                  context.read<VenuesBloc>().add(LoadVenuesAction(
+                        searchText: searchQuery,
+                        searchRadius: radius,
+                      ));
                 },
                 child: const Text(
                   'Find venues',
@@ -79,19 +80,19 @@ class _VenuesViewState extends State<VenuesView> {
                 ),
               ),
             ),
-            StoreConnector<AppState, bool>(
-              converter: (store) => store.state.isLoading,
-              builder: (context, isLoading) {
-                if (isLoading) {
+            BlocBuilder<VenuesBloc, AppState>(
+              builder: (context, state) {
+                if (state.isLoading) {
                   return const CircularProgressIndicator();
                 } else {
                   return const SizedBox();
                 }
               },
             ),
-            StoreConnector<AppState, List<Venue>?>(
-              converter: (store) => store.state.venues,
-              builder: (context, venues) {
+            BlocBuilder<VenuesBloc, AppState>(
+              builder: (context, state) {
+                final venues = state.venues;
+
                 if (venues == null) {
                   return Container();
                 }
@@ -108,9 +109,12 @@ class _VenuesViewState extends State<VenuesView> {
                 );
               },
             ),
-            StoreConnector<AppState, Object?>(
-              converter: (store) => store.state.error,
-              onDidChange: (previousViewModel, error) {
+            BlocListener<VenuesBloc, AppState>(
+              listenWhen: (previous, current) {
+                return current.error != null;
+              },
+              listener: (context, state) {
+                final error = state.error;
                 if (error != null) {
                   if (error is BadRequestLocationException) {
                     showErrorDialog(context, error.text);
@@ -128,9 +132,7 @@ class _VenuesViewState extends State<VenuesView> {
                   }
                 }
               },
-              builder: (context, error) {
-                return Container();
-              },
+              child: Container(),
             ),
           ],
         ),
