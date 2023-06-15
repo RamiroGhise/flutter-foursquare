@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:venues/bloc/actions.dart';
 import 'package:venues/bloc/app_state.dart';
-import 'package:venues/services/location/location_service.dart';
 import 'dart:developer' as devtools show log;
 
 class VenuesBloc extends Bloc<LoadAction, AppState> {
@@ -14,7 +13,7 @@ class VenuesBloc extends Bloc<LoadAction, AppState> {
         error: null,
       ));
       try {
-        final venues = await LocationService.foursquare().getVenues(
+        final venues = await event.loader(
           searchQuery: event.searchText,
           searchRadius: event.searchRadius,
         );

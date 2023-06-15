@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:venues/services/location/venue.dart';
 
+typedef VenuesLoader = Future<List<Venue>> Function(
+    {String? searchQuery, String? searchRadius});
 
 // Base class for all actions related to fetching venues.
 // All these actions will be of type [LoadAction]
@@ -9,16 +11,19 @@ abstract class LoadAction {
   const LoadAction();
 }
 
-
 // The action takes an optional search text and an optional search radius.
 // These will be used in the query made by the location provider.
 class LoadVenuesAction implements LoadAction {
   final String? searchText;
   final String? searchRadius;
+  final VenuesLoader loader;
 
-  const LoadVenuesAction({this.searchText, this.searchRadius});
+  const LoadVenuesAction({
+    this.searchText,
+    this.searchRadius,
+    required this.loader,
+  });
 }
-
 
 // Action triggered by a successful fetching of venues.
 class SuccessfullyLoadVenuesAction implements LoadAction {
@@ -27,11 +32,9 @@ class SuccessfullyLoadVenuesAction implements LoadAction {
   const SuccessfullyLoadVenuesAction({required this.venues});
 }
 
-
 // Action triggered when venues fetching has failed.
 class FailedLoadVenuesAction implements LoadAction {
   final Object error;
 
   const FailedLoadVenuesAction({required this.error});
 }
-

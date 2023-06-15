@@ -52,6 +52,14 @@ class Venue {
   }
 
   @override
+  bool operator ==(covariant Venue other) {
+    return venueId == other.venueId;
+  }
+
+  @override
+  int get hashCode => venueId.hashCode;
+
+  @override
   String toString() {
     return 'Venue, venueId = $venueId, name = $name, distance = $distanceToVenue';
   }

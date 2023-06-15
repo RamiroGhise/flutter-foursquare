@@ -6,6 +6,7 @@ import 'package:venues/bloc/app_state.dart';
 import 'package:venues/bloc/venues_bloc.dart';
 import 'package:venues/constants/routes.dart';
 import 'package:venues/services/location/location_exceptions.dart';
+import 'package:venues/services/location/location_service.dart';
 import 'package:venues/services/location/venue.dart';
 import 'package:venues/utilities/show_error_dialog.dart';
 import 'package:venues/views/venues/venues_list_view.dart';
@@ -72,6 +73,7 @@ class _VenuesViewState extends State<VenuesView> {
                   context.read<VenuesBloc>().add(LoadVenuesAction(
                         searchText: searchQuery,
                         searchRadius: radius,
+                        loader: LocationService.foursquare().getVenues,
                       ));
                 },
                 child: const Text(
