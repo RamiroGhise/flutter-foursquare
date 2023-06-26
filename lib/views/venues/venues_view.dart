@@ -42,6 +42,14 @@ class _VenuesViewState extends State<VenuesView> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Venues'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed(favoriteVenuesRoute);
+            },
+            icon: const Icon(Icons.bookmark_outlined),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

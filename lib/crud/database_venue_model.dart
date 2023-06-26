@@ -25,6 +25,6 @@ class DatabaseVenue {
 
   @override
   String toString() {
-    return 'DatabaseVenue, id: $id, providerId: $venueId';
+    return 'DatabaseVenue, id: $id, venueId: $venueId';
   }
 }

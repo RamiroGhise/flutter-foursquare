@@ -11,5 +11,5 @@ const createVenuesTable = '''
   CREATE TABLE IF NOT EXISTS "$venuesTableName" (
     "id" INTEGER NOT NULL,
     "remoteId" TEXT NOT NULL UNIQUE,
-  );
-''';
+    PRIMARY KEY("id" AUTOINCREMENT)
+  );''';

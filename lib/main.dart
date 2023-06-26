@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:venues/bloc/venues_bloc.dart';
 import 'package:venues/constants/routes.dart';
+import 'package:venues/views/venues/favorite_venues_view.dart';
 import 'package:venues/views/venues/venue_details_view.dart';
 import 'package:venues/views/venues/venues_view.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
       home: const HomePage(),
       routes: {
         venueDetailsRoute: (context) => const VenueDetailsView(),
+        favoriteVenuesRoute: (context) => const FavoriteVenuesView(),
       },
     );
   }
