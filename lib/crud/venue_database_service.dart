@@ -22,6 +22,7 @@ class VenuesDatabaseService {
         _venuesStreamController.sink.add(_venues);
       },
     );
+    _ensureDbIsOpen();
   }
 
   static final VenuesDatabaseService _shared =
@@ -112,6 +113,13 @@ class VenuesDatabaseService {
     devtools.log('getVenue => $venue');
 
     return venue;
+  }
+
+  // Returns true if there is a venue with a venueId in the database.
+  Future<bool> isVenueBookmarked({required String venueId}) {
+    return getVenue(venueId: venueId)
+        .then((dbVenue) => true)
+        .catchError((_) => false);
   }
 
   // removes all venues from the database and returns the number of deleted entries
