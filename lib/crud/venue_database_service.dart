@@ -19,6 +19,7 @@ class VenuesDatabaseService {
     _venuesStreamController = StreamController<List<DatabaseVenue>>.broadcast(
       // called whenever a new listener subscribes to this [StreamController]
       onListen: () {
+        devtools.log("new listener to this stream");
         _venuesStreamController.sink.add(_venues);
       },
     );

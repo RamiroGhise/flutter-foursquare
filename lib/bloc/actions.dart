@@ -4,11 +4,16 @@ import 'package:venues/services/location/venue.dart';
 typedef VenuesLoader = Future<List<Venue>> Function(
     {String? searchQuery, String? searchRadius});
 
-// Base class for all actions related to fetching venues.
+// Base class for all actions that trigger a loading state.
 // All these actions will be of type [LoadAction]
 @immutable
 abstract class LoadAction {
   const LoadAction();
+}
+
+// Used to trigger an initialization process
+class InitializeBookmarksAction implements LoadAction {
+  const InitializeBookmarksAction();
 }
 
 // The action takes an optional search text and an optional search radius.
@@ -37,4 +42,11 @@ class FailedLoadVenuesAction implements LoadAction {
   final Object error;
 
   const FailedLoadVenuesAction({required this.error});
+}
+
+// Action triggered when the user bookmarks a venue
+class AddOrRemoveVenueBookmarkAction implements LoadAction {
+  final String venueId;
+
+  AddOrRemoveVenueBookmarkAction({required this.venueId});
 }

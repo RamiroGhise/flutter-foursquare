@@ -13,7 +13,7 @@ class VenueDetailsView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('details'),
+        title: Text(venue.name),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 0.0),
