@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:current_location/current_location.dart';
-import 'package:venues/constants/foursquare.dart';
+import 'package:venues/services/app_config.dart';
 import 'package:venues/services/location/location_exceptions.dart';
 import 'package:venues/services/location/location_provider.dart';
 import 'package:venues/services/location/venue.dart';
@@ -11,12 +11,15 @@ import 'dart:developer' as devtools show log;
 
 class FoursquareLocationProvider implements LocationProvider {
   final _currentLocation = CurrentLocation();
-  static const String apiKey = foursquareApiKey;
+  final String _apiKey = AppConfig.foursquareApiKey;
 
   FoursquareLocationProvider();
 
   @override
-  Future<List<Venue>> getVenues({String? searchQuery, String? searchRadius}) async {
+  Future<List<Venue>> getVenues({
+    String? searchQuery,
+    String? searchRadius,
+  }) async {
     double latitude = 0.0;
     double longitude = 0.0;
     final coordinates = await _currentLocation.getCoordinates();
@@ -33,7 +36,8 @@ class FoursquareLocationProvider implements LocationProvider {
     if (searchQuery != null) queryParameters['query'] = searchQuery;
     queryParameters['ll'] = "$latitude,$longitude";
     if (searchRadius != null) queryParameters['radius'] = searchRadius;
-    queryParameters['fields'] = 'fsq_id,name,distance,categories,photos,tastes,features,rating,stats,location,geocodes,description,tel,email,website,hours,price,menu';
+    queryParameters['fields'] =
+        'fsq_id,name,distance,categories,photos,tastes,features,rating,stats,location,geocodes,description,tel,email,website,hours,price,menu';
     queryParameters['sort'] = 'DISTANCE';
     queryParameters['limit'] = '10';
 
@@ -45,7 +49,7 @@ class FoursquareLocationProvider implements LocationProvider {
     devtools.log(url.toString());
     final headers = {
       "accept": "application/json",
-      "Authorization": apiKey,
+      "Authorization": _apiKey,
     };
 
     List<Venue> venuesList = [];
@@ -76,5 +80,4 @@ class FoursquareLocationProvider implements LocationProvider {
       rethrow;
     }
   }
-
 }

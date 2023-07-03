@@ -60,6 +60,21 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "version"
+    productFlavors {
+        prod {
+            dimension "version"
+            buildConfigField "String", "env", '"prod"'
+            resValue "string", "app_name", "Venues"
+        }
+        dev {
+            dimension "version"
+            buildConfigField "String", "env", '"dev"'
+            resValue "string", "app_name", "Venues Dev"
+            applicationIdSuffix ".test"
+        }
+    }
 }
 
 flutter {

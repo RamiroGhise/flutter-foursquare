@@ -76,10 +76,12 @@ class VenuesBloc extends Bloc<LoadAction, AppState> {
         await VenuesDatabaseService().createVenue(venueId: event.venueId);
       }
       final bookmarks = await VenuesDatabaseService().getAllVenues();
-      emit(AppState(isLoading: false,
+      emit(AppState(
+        isLoading: false,
         venues: state.venues,
         bookmarks: bookmarks.toList(),
-        error: null,));
+        error: null,
+      ));
     });
   }
 }
