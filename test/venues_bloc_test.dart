@@ -22,7 +22,7 @@ void main() {
     blocTest<VenuesBloc, AppState>(
       'Test initial state',
       build: () => bloc,
-      verify: (bloc) => expect(bloc.state, const AppState.empty()),
+      verify: (bloc) => expect(bloc.state, AppState.empty()),
     );
 
     // fetch mock data (venues.json)
@@ -38,14 +38,16 @@ void main() {
       },
       wait: const Duration(seconds: 2),
       expect: () => [
-        const AppState(
+        AppState(
           isLoading: true,
           venues: null,
+          bookmarks: bloc.state.bookmarks,
           error: null,
         ),
         AppState(
           isLoading: false,
           venues: foursquareVenues,
+          bookmarks: bloc.state.bookmarks,
           error: null,
         )
       ],
