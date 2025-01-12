@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:venues/bloc/actions.dart';
 import 'package:venues/bloc/app_state.dart';
 import 'package:venues/bloc/venues_bloc.dart';
+import 'package:venues/presentation/navigation/screens.dart';
 import 'package:venues/services/location/location_exceptions.dart';
 import 'package:venues/services/location/location_service.dart';
 import 'package:venues/services/location/venue.dart';
@@ -45,7 +46,7 @@ class _VenuesViewState extends State<VenuesView> {
         actions: [
           IconButton(
             onPressed: () {
-              context.go('/favorite-venues');
+              context.goNamed(Screens.favoriteVenues.name);
             },
             icon: const Icon(Icons.bookmark_outlined),
           ),
@@ -110,8 +111,8 @@ class _VenuesViewState extends State<VenuesView> {
                   child: VenuesListView(
                     venues: venues,
                     onTap: (venue) {
-                      context.go(
-                        "/venues/venue-details",
+                      context.goNamed(
+                        Screens.venueDetails.path,
                         extra: venue,
                       );
                     },
