@@ -1,10 +1,11 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:venues/bloc/actions.dart';
 import 'package:venues/bloc/app_state.dart';
 import 'package:venues/bloc/venues_bloc.dart';
-import 'package:venues/constants/routes.dart';
+import 'package:venues/presentation/navigation/screens.dart';
 import 'package:venues/services/location/location_exceptions.dart';
 import 'package:venues/services/location/location_service.dart';
 import 'package:venues/services/location/venue.dart';
@@ -45,7 +46,7 @@ class _VenuesViewState extends State<VenuesView> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).pushNamed(favoriteVenuesRoute);
+              context.goNamed(Screens.favoriteVenues.name);
             },
             icon: const Icon(Icons.bookmark_outlined),
           ),
@@ -110,9 +111,9 @@ class _VenuesViewState extends State<VenuesView> {
                   child: VenuesListView(
                     venues: venues,
                     onTap: (venue) {
-                      Navigator.of(context).pushNamed(
-                        venueDetailsRoute,
-                        arguments: venue,
+                      context.goNamed(
+                        Screens.venueDetails.path,
+                        extra: venue,
                       );
                     },
                   ),

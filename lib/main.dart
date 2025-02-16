@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:venues/bloc/actions.dart';
 import 'package:venues/bloc/venues_bloc.dart';
-import 'package:venues/constants/routes.dart';
+import 'package:venues/presentation/navigation/navigator.dart';
 import 'package:venues/services/app_config.dart';
-import 'package:venues/views/venues/favorite_venues_view.dart';
-import 'package:venues/views/venues/venue_details_view.dart';
 import 'package:venues/views/venues/venues_view.dart';
 import 'dart:developer' as devtools show log;
 
@@ -23,16 +21,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<VenuesBloc>(
       create: (context) => VenuesBloc()..add(const InitializeBookmarksAction()),
-      child: MaterialApp(
+      child: MaterialApp.router(
+        routerConfig: AppRouter.router,
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: AppConfig.isDeveloperMode ? Colors.red : Colors.blue,
         ),
-        home: const HomePage(),
-        routes: {
-          venueDetailsRoute: (context) => const VenueDetailsView(),
-          favoriteVenuesRoute: (context) => const FavoriteVenuesView(),
-        },
       ),
     );
   }

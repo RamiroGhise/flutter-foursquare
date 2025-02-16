@@ -4,11 +4,15 @@ import 'package:venues/utilities/widgets/image_carousel.dart';
 import 'package:venues/views/venues/venue_summary.dart';
 
 class VenueDetailsView extends StatelessWidget {
-  const VenueDetailsView({Key? key}) : super(key: key);
+  const VenueDetailsView({
+    Key? key,
+    required this.venue,
+  }) : super(key: key);
+
+  final Venue venue;
 
   @override
   Widget build(BuildContext context) {
-    final venue = ModalRoute.of(context)!.settings.arguments as Venue;
     final schedule = venue.hours?.schedule;
 
     return Scaffold(
@@ -22,8 +26,7 @@ class VenueDetailsView extends StatelessWidget {
             children: [
               VenueSummary(venue: venue),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 16.0, horizontal: 0.0),
+                padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 0.0),
                 child: ImageCarousel(
                   imageUrls: venue.photoUrls,
                   height: 300.0,
@@ -53,7 +56,7 @@ class VenueDetailsView extends StatelessWidget {
                     venue.hours?.display ?? '',
                     overflow: TextOverflow.ellipsis,
                   ),
-                  children: generateTimeListTiles(schedule).toList()
+                  children: generateTimeListTiles(schedule).toList(),
                 ),
             ],
           ),
