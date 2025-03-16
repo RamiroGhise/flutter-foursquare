@@ -123,7 +123,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: e61c09f230541a82d24c2b72120b21b516161a56
+      resolved-ref: f4563ce8820a039b9edb9665b912cb6ea29d8776
       url: "https://github.com/RamiroGhise/current-location.git"
     source: git
     version: "0.0.1"
